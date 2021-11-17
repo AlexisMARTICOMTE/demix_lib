@@ -1,2 +1,6 @@
 ﻿demix_tests
 .idea
+demix_lib.egg-info
+dist
+demix_lib/__pycache__
+main.py

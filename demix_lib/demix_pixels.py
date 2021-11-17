@@ -2,20 +2,26 @@
 # -*- coding: utf-8 -*-
 
 # ---------------------------------------------------------------------------------------------------------------------
-# Alexis MC - V0.1 - 15/11/2021 Création du main de la librairie, permet de tester la lib
+# Alexis MC - V0.1 - 15/11/2021 Creation of the python DEMIX library
+# Alexis MC - V0.2 - 17/11/2021 Added function prototype
 # ---------------------------------------------------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------------------------------------------------
 # IMPORTS
 # ---------------------------------------------------------------------------------------------------------------------
-import demix_lib as dl
+import demix_lib.demix_url_handler as dh
+
 
 # ---------------------------------------------------------------------------------------------------------------------
-# CONSTANTES
+# CONSTANTS
 # ---------------------------------------------------------------------------------------------------------------------
 
-
-
-if __name__ == '__main__':
-    dl.help()
-
+def download_layer(tile_name, dem, layer):
+    """
+    Allow you to download a specific layer as a geotiff
+    :param tile_name: the demix tile name
+    :param dem: the dem from which you want to get a layer
+    :param layer: the layer name
+    :return: the wanted layer
+    """
+    return dh.request_pixels(tile_name=tile_name, dem=dem, layer=layer)

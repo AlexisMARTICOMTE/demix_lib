@@ -2,7 +2,7 @@
 Library that allow you to get stats arround DEMIX tiles and DEM
 ### Installation
 ```
-pip install medium-multiply
+pip install demix_lib
 ```
 
 ### Get started
