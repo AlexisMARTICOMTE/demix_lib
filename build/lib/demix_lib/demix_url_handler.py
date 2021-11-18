@@ -17,7 +17,7 @@ import json
 # CONSTANTS
 # ---------------------------------------------------------------------------------------------------------------------
 # BASE_URL : Allow you to define product's download url
-BASE_URL = "http://192.168.1.177:8081/DEMIXService/DEMIXService?"
+BASE_URL = "http://192.168.1.177:8080/DEMIXService/DEMIXService?"
 # VERIFY : Put False if you don't want to check website certificate, put True ether way
 VERIFY = False
 
@@ -33,7 +33,8 @@ def byte_to_json(bytes_value):
     my_json = bytes_value.decode('utf8').replace("'", '"')
     # Load the JSON to a Python list & dump it back out as formatted JSON
     data = json.loads(my_json)
-    return data
+    s = json.dumps(data, indent=4, sort_keys=True)
+    return s
 
 
 def request_pixels(tile_name, dem, layer):
@@ -56,7 +57,7 @@ def request_score(tile_name, dem, criterion):
     :param criterion: str, a criterion name, for example "A01"
     :return: the request response
     """
-    request = BASE_URL + "service=getScore" + "&DEMIXTile=" + tile_name + "&DEM=" + dem + "&Criterion=" + criterion
+    request = BASE_URL + "service=getScores" + "&DEMIXTile=" + tile_name + "&DEM=" + dem + "&Criterion=" + criterion
     return send_request(request)
 
 
@@ -79,5 +80,4 @@ def send_request(request):
     """
     http = urllib3.PoolManager(cert_reqs='CERT_REQUIRED', ca_certs=certifi.where())
     response = http.request('GET', request)
-    http.clear()
     return byte_to_json(response.data)

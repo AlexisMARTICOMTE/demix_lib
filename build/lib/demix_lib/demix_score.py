@@ -24,7 +24,8 @@ def get_score(demix_tile_name, dem, criterion):
     :param criterion:
     :return:
     """
-    return dh.request_score(demix_tile_name, dem, criterion)
+    dh.request_score(demix_tile_name, dem, criterion)
+    print("getting score for...")
 
 
 def get_scores(demix_tile_name_list, dem_list, criterion_list):
@@ -47,3 +48,4 @@ def get_scores(demix_tile_name_list, dem_list, criterion_list):
         for dem in dem_list:
             for criterion in criterion_list:
                 dh.request_score(demix_tile_name, dem, criterion)
+    print("getting score for...")

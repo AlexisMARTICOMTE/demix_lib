@@ -15,4 +15,4 @@ criterion_list = [("A01", "Product fractional cover"),
 
 layer_list = ["validMask", "SourceMask", "landWaterMask"]
 
-demix_tile_example = ["N35YE014F", "N64ZW019C"]
+demix_tile_example = ["N64ZW019C"]

@@ -94,18 +94,6 @@ def print_dem_list():
         print("---------------------------")
 
 
-def print_layer_list():
-    """
-    print the dem list
-    :return:
-    """
-    print("\nLayer list :")
-    print("---------------------------")
-    for layer in demix_conf.layer_list:
-        print("Layer name = " + layer)
-        print("---------------------------")
-
-
 def print_supported_dem_list():
     """
     print the supported dem list
@@ -124,14 +112,6 @@ def get_criterion_list():
     :return: the available criterion list
     """
     return demix_conf.criterion_list
-
-
-def get_layer_list():
-    """
-    print the dem list
-    :return:
-    """
-    return demix_conf.layer_list
 
 
 def get_dem_list():
