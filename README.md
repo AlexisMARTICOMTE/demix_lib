@@ -115,7 +115,7 @@ dl.print_criterion_list()
 | ASTER GDEM | <span style="color:red">no</span> |
 | CopDEM GLO-30 | <span style="color:green">yes</span> |
 | NASADEM | <span style="color:red">no</span> |
-| SRTMGL1 | <span style="color:red">no</span> |
+| SRTMGL1 | <span style="color:green">yes</span> |
 
 <h3 id='Criterion'>Criterion list</h3>
     

@@ -48,26 +48,29 @@ def request_pixels(tile_name, dem, layer):
     return send_request(request)
 
 
-def request_score(tile_name, dem, criterion):
+def request_score(tile_name, dem, criterion, print_request=True):
     """
     Ask the server to get the score in the chosen DEMIX tile and DEM for a specific criterion
+    :param print_request: true if you want to look at the sent request
     :param tile_name: str, a tile name, for example "N64ZW019"
     :param dem: str, a dem name, for example "SRTMGL1"
     :param criterion: str, a criterion name, for example "A01"
     :return: the request response
     """
     request = BASE_URL + "service=getScore" + "&DEMIXTile=" + tile_name + "&DEM=" + dem + "&Criterion=" + criterion
+    if print_request:
+        print(request)
     return send_request(request)
 
 
-def request_demix_tile_name(lon, lat):
+def request_demix_tile_info(lon, lat):
     """
     Ask the server to get the tile name at the desired position
     :param lon: float, longitude of the desired tile
     :param lat: float, latitude of the desired tile
     :return: the DEMIX tile name
     """
-    request = BASE_URL + "service=getDEMIXTileName" + "&lon=" + lon + "&lat=" + lat
+    request = BASE_URL + "service=getDEMIXTileInfo" + "&lon=" + lon + "&lat=" + lat
     return send_request(request)
 
 

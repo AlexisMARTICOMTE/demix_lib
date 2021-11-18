@@ -35,8 +35,18 @@ def get_demix_tile_name(lon, lat):
     :param lat:  latitude of the DEMIX tile
     :return: demix tile name
     """
-    print('searching DEMIX tile at position ' + str(lon) + ',' + str(lat))
-    return du.request_demix_tile_name(lon, lat)
+    demix_tile_info = du.request_demix_tile_info(lon, lat)
+    return demix_tile_info["demixtile"]
+
+
+def get_demix_tile_info(lon, lat):
+    """
+    return the demix tile name associated to a longitude and latitude
+    :param lon: longitude of the DEMIX tile
+    :param lat:  latitude of the DEMIX tile
+    :return: demix tile name
+    """
+    return du.request_demix_tile_info(lon, lat)
 
 
 def is_dem_supported(dem_name):
