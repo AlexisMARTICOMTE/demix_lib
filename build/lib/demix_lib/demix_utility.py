@@ -39,6 +39,13 @@ def get_demix_tile_name(lon, lat):
     return du.request_demix_tile_name(lon, lat)
 
 
+def is_dem_supported(dem_name):
+    for dem in demix_conf.supported_dem_list:
+        if dem_name == dem:
+            return True
+    return False
+
+
 def are_dems_supported(dem_name_list, print_response=False):
     """
     return an array of pair containing the dem as an str and if he is supported or not as a bool

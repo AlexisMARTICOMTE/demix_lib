@@ -5,7 +5,7 @@
 
 dem_list = ["SRTMGL1", "CopDEM_GLO-30", "ASTER_GDEM", "ALOS_World_3D", "Copernicus_DEM", "NASADEM"]
 
-supported_dem_list = ["CopDEM_GLO-30"]
+supported_dem_list = ["CopDEM_GLO-30", "SRTMGL1"]
 
 criterion_list = [("A01", "Product fractional cover"),
                   ("A02", "Valid data fraction"),
@@ -13,6 +13,6 @@ criterion_list = [("A01", "Product fractional cover"),
                   ("A04", "Valid land fraction"),
                   ("A05", "Primary land fraction")]
 
-layer_list = ["validMask", "SourceMask", "landWaterMask"]
+layer_list = ["validMask", "SourceMask", "landWaterMask", "Height"]
 
 demix_tile_example = ["N35YE014F", "N64ZW019C"]
