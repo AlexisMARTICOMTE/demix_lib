@@ -70,7 +70,7 @@ def request_demix_tile_info(lon, lat):
     :param lat: float, latitude of the desired tile
     :return: the DEMIX tile name
     """
-    request = BASE_URL + "service=getDEMIXTileInfo" + "&lon=" + lon + "&lat=" + lat
+    request = BASE_URL + "service=getDEMIXTileInfo" + "&lon=" + str(lon) + "&lat=" + str(lat)
     return send_request(request)
 
 

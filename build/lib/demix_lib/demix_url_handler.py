@@ -17,7 +17,7 @@ import json
 # CONSTANTS
 # ---------------------------------------------------------------------------------------------------------------------
 # BASE_URL : Allow you to define product's download url
-BASE_URL = "http://192.168.1.177:8081/DEMIXService/DEMIXService?"
+BASE_URL = "http://visioterra.org:8080/DEMIXService/DEMIXService?"
 # VERIFY : Put False if you don't want to check website certificate, put True ether way
 VERIFY = False
 
@@ -48,7 +48,7 @@ def request_pixels(tile_name, dem, layer):
     return send_request(request)
 
 
-def request_score(tile_name, dem, criterion, print_request=True):
+def request_score(tile_name, dem, criterion, print_request=False):
     """
     Ask the server to get the score in the chosen DEMIX tile and DEM for a specific criterion
     :param print_request: true if you want to look at the sent request
