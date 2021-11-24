@@ -1,7 +1,7 @@
 <h1> DEMIX library </h1>
 
 The DEMIX Library that allow you to get scores for specific DEMIX tiles and DEM
-You also can download DEMIX Tile associated DEM Layers like SourceMask, Height, ...
+You also can download DEMIX Tile associated DEM Layers like SourceMask, Heights, ...
 
 <h2> Table of contents: </h2>
 
@@ -26,6 +26,22 @@ pip install demix_lib
 
 <div id='demix_lib_functions'></div>
 <h1>DEMIX lib functions</h1>
+This section is a step-by-step guide on how to use the DEMIX lib functions. By getting through this guide, you'll learn how to:<br/>
+*   Get a DEMIX tile id from a given longitude and latitude<br/>
+*   Apply a criterion to a DEM, over a given DEMIX tile<br/>
+*   Retrieve a raster of DEM layer over a DEMIX tile
+
+<h2>Getting DEMIX Tile</h2>
+The DEMIX api enables you to get a DEMIX tile id from a given longitude and latitude.
+
+```Python
+import demix_lib as dl
+lon = 14.44799
+lat = 35.81923
+print(dl.get_demix_tile_info(lon, lat))
+print(dl.get_demix_tile_name(lon, lat))
+```
+
 <h2 id='#Getting-Score'>Getting Scores</h2>
 First thing first, you can use the demix api to get directly stats from the desired DEMIX Tile and Criterion
 <br/>
@@ -118,14 +134,16 @@ dl.print_criterion_list()
 | SRTMGL1 | <span style="color:green">yes</span> |
 
 <h3 id='Criterion'>Criterion list</h3>
-    
-| Criterion name | Criterion id | version | Date | Category | Target | Description | Requirement |
-| :---: | :---: | :---: | :---: | :---: | :---: | :--- | :--- |
-| Product fractional cover | A01 |  0.1 | 20211103 | A-completeness | <span style="color:green">All</span> |  indique le pourcentage dela tuile demix qui est ouverte par le produit, area couverte divisée par area de la tuile |  Area computation on an ellipsoïd and simple |
-| Valid data fraction | A02 |  0.1 | 20211103 | A-completeness | <span style="color:green">All</span> |  Area d'une demix tile qui est couverte par une data valide , on fait la somme de chaque cellule avec des données valide et on calcule l'aire puis on fait ce total divisé par l'aire totale de la tuile demix |  metadata no/void.un masque par pixel doit indiqué si ils sont extrapole, infilled, ou masqué sinon c'est recalé |
-| Primary data | A03 |  0.1 | 20211103 | A-completeness | <span style="color:green">All</span> |  indique l'aire dans une demix tile couverte par une valid data provenant de la source principale |  metadata no/void.un masque par pixel doit indiqué si ils sont extrapole, infilled, ou masqué sinon c'est recalé |
-| Valid land fraction | A04 |  0.1 | 20211103 | A-completeness | <span style="color:green">All</span> |   indique l'aire dans une demix tile couverte par une valid data provenant de la source principale |  metadata no/void.un masque par pixel doit indiqué si ils sont extrapole, infilled, ou masqué sinon c'est recalé |
-| Primary land fraction | A05 |  0.1 | 20211103 | A-completeness | <span style="color:green">All</span> |  indique  aire couverte par une donnée primaire en land |  metadata no/void.un masque par pixel doit indiqué si ils sont extrapole, infilled, ou masqué sinon c'est recalé |
+
+
+| Criterion name | Criterion id | version | Date | Category | Target |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| Product fractional cover | A01 |  0.1 | 20211103 | A-completeness | <span style="color:green">All</span> |
+| Valid data fraction | A02 |  0.1 | 20211103 | A-completeness | <span style="color:green">All</span> |
+| Primary data | A03 |  0.1 | 20211103 | A-completeness | <span style="color:green">All</span> |
+| Valid land fraction | A04 |  0.1 | 20211103 | A-completeness | <span style="color:green">All</span> |
+| Primary land fraction | A05 |  0.1 | 20211103 | A-completeness | <span style="color:green">All</span> |
+
 
 <h3 id='Layers'>Layer list</h3>
 
