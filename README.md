@@ -1,22 +1,29 @@
-<img src="https://visioterra.fr/telechargement/P317_DEMIX/logos/logo%202-2_white_demix_background.png" style="display: block;  margin-left: auto;  margin-right: auto" height="200px"></img>
-<h1> DEMIX library </h1> 
+<center><img src="https://visioterra.fr/telechargement/P317_DEMIX/logos/logo%202-2_white_demix_background.png" height="200px"></center>
+<center><h1> DEMIX library</h1></center>  
 
-The DEMIX Library that allow you to get scores for specific DEMIX tiles and DEM
-You also can download DEMIX Tile associated DEM Layers like SourceMask, Heights, ...
+<center><p>The DEMIX Library allow you to get scores for specific DEMIX tiles and DEM
+You also can download DEMIX Tile associated DEM Layers like SourceMask, Heights, ...</p></center>
+
+---
 
 <h2> Table of contents: </h2>
 
 0. <a href="#Installation">Installation</a><br/>
 1. <a href="#demix_lib_functions"> DEMIX lib functions</a><br/>
-    1.1 <a href="#Getting-Score">Getting Scores</a><br/>
-    1.2 <a href="#Getting-Geotiffs">Getting DEM</a><br/>
+    1.1 <a href="#getting_demix_tile">Getting DEMIX Tile</a><br/>
+    1.2 <a href="#getting_score">Getting Scores</a><br/>
+    1.3 <a href="#Getting-Geotiffs">Getting DEM</a><br/>
 2. <a href="#dem_and_criterions">Available DEMs and criterions</a><br/>
     2.1 <a href="#Dem">Dem list</a><br/>
     2.2 <a href="#Criterion">Criterion list</a><br/>
 3. <a href="#utility">Utility functions</a><br/>
-4. <a href="#Usage_example">Usage example</a><br/>
+4. <a href="#usage_example">Usage example</a><br/>
+   4.1 <a href="#jupyter_notebook">Jupyter Notebook</a><br/>
+   4.2 <a href="#custom_indicator">Getting a DEMIX layer and compute an indicator</a><br/>
+<br/>
+---
 
-<h2 id='Installation'> Installation</h2>
+<center><h2 id='Installation'> Installation</h2></center>
 To install the DEMIX library on your python environment :
 
 ```
@@ -24,15 +31,13 @@ pip install demix_lib
 ```
 
 
-
-<div id='demix_lib_functions'></div>
-<h1>DEMIX lib functions</h1>
+<center><h2 id='demix_lib_functions'>DEMIX lib functions</h2></center>
 This section is a step-by-step guide on how to use the DEMIX lib functions. By getting through this guide, you'll learn how to:<br/>
 *   Get a DEMIX tile id from a given longitude and latitude<br/>
 *   Apply a criterion to a DEM, over a given DEMIX tile<br/>
 *   Retrieve a raster of DEM layer over a DEMIX tile
 
-<h2>Getting DEMIX Tile</h2>
+<h3 id="getting_demix_tile">Getting DEMIX Tile</h3>
 The DEMIX api enables you to get a DEMIX tile id from a given longitude and latitude.
 
 ```Python
@@ -43,7 +48,7 @@ print(dl.get_demix_tile_info(lon, lat))
 print(dl.get_demix_tile_name(lon, lat))
 ```
 
-<h2 id='#Getting-Score'>Getting Scores</h2>
+<h3 id='#getting_score'>Getting Scores</h3>
 First thing first, you can use the demix api to get directly stats from the desired DEMIX Tile and Criterion
 <br/>
 In order to get scores to specific dem and tile, you need to choose a criterion.
@@ -67,8 +72,8 @@ for dem in  dems:
         print(dl.get_score(demix_tile_name=demix_tile_name, dem=dem, criterion=criterion))
 ```
 
-<div></div>
-<H2 id='Getting-Geotiffs'>Getting DEM</H2>
+
+<h3 id='Getting-Geotiffs'>Getting DEM</h3>
 To go further :
 You can always use your own criterions by downloading the wanted layer on your DEMIX tile and apply custom code to it.
 <br/>To download a DEM layer for a specific DEMIX Tile :
@@ -88,7 +93,7 @@ response = dl.download_layer(demix_tile_name=demix_tile_name,dem="CopDEM_GLO-30"
 legend_handle = list(map(int, response['values'].keys()))
 legend_label = list(response['values'].values())
 #defining the colormap for the layer (the layer has 6 values)
-color_map = cm.get_cmap('rainbow',6)
+color_map = cm.get_cmap("rainbow",6)
 #we use plt to look at the data
 plt.imshow(response["data"], interpolation='none', cmap=color_map, vmin=0, vmax=6)
 #creating legend values using the color map and the values stored
@@ -100,7 +105,7 @@ plt.legend( custom_handles,legend_label)
 plt.show()
 ```
 
-<H2 id='Getting-Geotiffs'>Utility functions</H2>
+<center><h2 id='Getting-Geotiffs'>Utility functions</h2></center>
 The DEMIX lib give you some utility functions that allow you to get or print informations about currently implemented criterions, available DEMs, layers...
 
 ```python
@@ -123,7 +128,7 @@ dl.print_criterion_list()
 ```
 
 
-<h2 id='dem_and_criterions'>Available DEMs and criterions</h2>
+<center><h2 id='dem_and_criterions'>Available DEMs and criterions</h2></center>
 <h3 id='Dem'>DEMs list</h3>
 
 | DEM name | supported |
@@ -137,13 +142,13 @@ dl.print_criterion_list()
 <h3 id='Criterion'>Criterion list</h3>
 
 
-| Criterion name | Criterion id | version | Date | Category | Target |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| Product fractional cover | A01 |  0.1 | 20211103 | A-completeness | <span style="color:green">All</span> |
-| Valid data fraction | A02 |  0.1 | 20211103 | A-completeness | <span style="color:green">All</span> |
-| Primary data | A03 |  0.1 | 20211103 | A-completeness | <span style="color:green">All</span> |
-| Valid land fraction | A04 |  0.1 | 20211103 | A-completeness | <span style="color:green">All</span> |
-| Primary land fraction | A05 |  0.1 | 20211103 | A-completeness | <span style="color:green">All</span> |
+| Criterion name | Criterion id | version | Author | Date | Category | Target | Description |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |:---: |
+| Product fractional cover | A01 |  0.1 | Peter Strobl | 20211103 | A-completeness | <span style="color:green">All</span> | <a href="https://visioterra.fr/telechargement/P317_DEMIX/criterions/A01_v0-1.pdf" onclick="window.open(this.href, 'PDF', 'height=1200, width= 800, top=100, left=100, toolbar=no, menubar=no, location=no, resizable=yes, scrollbars=no,status=no' );return false;">read</a> |
+| Valid data fraction | A02 |  0.1 | Peter Strobl | 20211103 | A-completeness | <span style="color:green">All</span> | <a href="" target="_blank"></a> |
+| Primary data | A03 |  0.1 | Peter Strobl | 20211103 | A-completeness | <span style="color:green">All</span> | <a href="" target="_blank"></a> |
+| Valid land fraction | A04 |  0.1 | Peter Strobl | 20211103 | A-completeness | <span style="color:green">All</span> | <a href="" target="_blank"></a> |
+| Primary land fraction | A05 |  0.1 | Peter Strobl | 20211103 | A-completeness | <span style="color:green">All</span> | <a href="" target="_blank"></a> |
 
 
 <h3 id='Layers'>Layer list</h3>
@@ -154,3 +159,43 @@ dl.print_criterion_list()
 | validMask | 
 | SourceMask |
 | landWaterMask |
+
+<center><h2 id='usage_example'>Usage example</h2></center>
+
+<h3 id='jupyter_notebook'>Jupyter Notebook</h3>
+<p>We made a jupyter notebook to demonstrate how can be used the DEMIX lib.<br> 
+Download the latest Jupyter Notebook file of
+the following repository and execute it in you favorite jupyter environnement (like 
+<a href="https://colab.research.google.com/">Colab</a> for example) to get an idea of what is possible.</p>
+<a href="https://visioterra.fr/telechargement/P317_DEMIX/notebook/"> Jupyter notebook repository</a>
+
+<h3 id='custom_indicator'>Getting a DEMIX layer and compute an indicator</h3>
+In this section, we will use the DEMIX lib to compute our own criterion on the SRTMGL1.
+
+<h4>1 Define the criterion</h4>
+First, we define a criterion
+
+```python
+#get or show the layers that you can ask in a download_layer function
+layer_list = dl.get_layer_list()
+dl.print_layer_list()
+```
+
+<h4>2 Get the wanted layer</h4>
+Second, we use the DEMIX lib to download the wanted tile and layer for SRTMGL1
+
+```python
+#get or show the layers that you can ask in a download_layer function
+layer_list = dl.get_layer_list()
+dl.print_layer_list()
+```
+
+<h4>3 Compute the criterion on the layer</h4>
+Finally, we compute the criterion on the downloaded layer and we plot the result
+
+```python
+#get or show the layers that you can ask in a download_layer function
+layer_list = dl.get_layer_list()
+dl.print_layer_list()
+```
+
