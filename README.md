@@ -145,7 +145,7 @@ dl.print_criterion_list()
 
 | Criterion name | Criterion id | version | Author | Date | Category | Target | Description |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |:---: |
-| Product fractional cover | A01 |  0.1 | Peter Strobl | 20211103 | A-completeness | <span style="color:green">All</span> | <a href="https://visioterra.fr/telechargement/P317_DEMIX/criterions/A01_v0-1.pdf" onclick="window.open(this.href, 'PDF', 'height=1200, width= 800, top=100, left=100, toolbar=no, menubar=no, location=no, resizable=yes, scrollbars=no,status=no' );return false;">read</a> |
+| Product fractional cover | A01 |  0.1 | Peter Strobl | 20211103 | A-completeness | <span style="color:green">All</span> | <a href="https://visioterra.fr/telechargement/P317_DEMIX/criterions/A01_v0-1.pdf" target="_blank">read</a> |
 | Valid data fraction | A02 |  0.1 | Peter Strobl | 20211103 | A-completeness | <span style="color:green">All</span> | <a href="" target="_blank"></a> |
 | Primary data | A03 |  0.1 | Peter Strobl | 20211103 | A-completeness | <span style="color:green">All</span> | <a href="" target="_blank"></a> |
 | Valid land fraction | A04 |  0.1 | Peter Strobl | 20211103 | A-completeness | <span style="color:green">All</span> | <a href="" target="_blank"></a> |
@@ -161,7 +161,7 @@ dl.print_criterion_list()
 | SourceMask |
 | landWaterMask |
 
-<h2 id='usage_example'>Usage example</h2>
+<h2 align="center" id='usage_example'>Usage example</h2>
 
 <h3 id='jupyter_notebook'>Jupyter Notebook</h3>
 <p>We made a jupyter notebook to demonstrate how can be used the DEMIX lib.<br> 
@@ -170,7 +170,7 @@ the following repository and execute it in you favorite jupyter environnement (l
 <a href="https://colab.research.google.com/">Colab</a> for example) to get an idea of what is possible.</p>
 <a href="https://visioterra.fr/telechargement/P317_DEMIX/notebook/"> Jupyter notebook repository</a>
 
-<h3 align="center" id='custom_indicator'>Getting a DEMIX layer and compute an indicator</h3>
+<h3 id='custom_indicator'>Getting a DEMIX layer and compute an indicator</h3>
 In this section, we will use the DEMIX lib to compute our own criterion on the SRTMGL1.
 
 <h4>1 Define the criterion</h4>
