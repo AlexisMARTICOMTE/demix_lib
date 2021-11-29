@@ -1,4 +1,5 @@
-<h1> DEMIX library </h1>
+<img src="https://visioterra.fr/telechargement/P317_DEMIX/logos/logo%202-2_white_demix_background.png" style="display: block;  margin-left: auto;  margin-right: auto" height="200px"></img>
+<h1> DEMIX library </h1> 
 
 The DEMIX Library that allow you to get scores for specific DEMIX tiles and DEM
 You also can download DEMIX Tile associated DEM Layers like SourceMask, Heights, ...
