@@ -1,4 +1,4 @@
-<img align="center" src="https://visioterra.fr/telechargement/P317_DEMIX/logos/logo%202-2_white_demix_background.png" height="200px">
+<p align="center"><img  src="https://visioterra.fr/telechargement/P317_DEMIX/logos/logo%202-2_white_demix_background.png" height="200px"></p>
 <h1 align="center"> DEMIX library</h1> 
 
 <p>The DEMIX Library allow you to get scores for specific DEMIX tiles and DEM
@@ -32,7 +32,7 @@ pip install demix_lib
 ```
 
 
-<h2 id='demix_lib_functions'>DEMIX lib functions</h2>
+<h2 align="center" id='demix_lib_functions'>DEMIX lib functions</h2>
 This section is a step-by-step guide on how to use the DEMIX lib functions. By getting through this guide, you'll learn how to:<br/>
 *   Get a DEMIX tile id from a given longitude and latitude<br/>
 *   Apply a criterion to a DEM, over a given DEMIX tile<br/>
@@ -106,7 +106,7 @@ plt.legend( custom_handles,legend_label)
 plt.show()
 ```
 
-<h2 id='Getting-Geotiffs'>Utility functions</h2>
+<h2 align="center" id='Getting-Geotiffs'>Utility functions</h2>
 The DEMIX lib give you some utility functions that allow you to get or print informations about currently implemented criterions, available DEMs, layers...
 
 ```python
@@ -129,7 +129,7 @@ dl.print_criterion_list()
 ```
 
 
-<h2 id='dem_and_criterions'>Available DEMs and criterions</h2>
+<h2 align="center" id='dem_and_criterions'>Available DEMs and criterions</h2>
 <h3 id='Dem'>DEMs list</h3>
 
 | DEM name | supported |
@@ -170,7 +170,7 @@ the following repository and execute it in you favorite jupyter environnement (l
 <a href="https://colab.research.google.com/">Colab</a> for example) to get an idea of what is possible.</p>
 <a href="https://visioterra.fr/telechargement/P317_DEMIX/notebook/"> Jupyter notebook repository</a>
 
-<h3 id='custom_indicator'>Getting a DEMIX layer and compute an indicator</h3>
+<h3 align="center" id='custom_indicator'>Getting a DEMIX layer and compute an indicator</h3>
 In this section, we will use the DEMIX lib to compute our own criterion on the SRTMGL1.
 
 <h4>1 Define the criterion</h4>
