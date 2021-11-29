@@ -21,6 +21,7 @@ You also can download DEMIX Tile associated DEM Layers like SourceMask, Heights,
    4.1 <a href="#jupyter_notebook">Jupyter Notebook</a><br/>
    4.2 <a href="#custom_indicator">Getting a DEMIX layer and compute an indicator</a><br/>
 <br/>
+
 ---
 
 <center><h2 id='Installation'> Installation</h2></center>
