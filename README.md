@@ -167,8 +167,8 @@ dl.print_criterion_list()
 <p>We made a jupyter notebook to demonstrate how can be used the DEMIX lib.<br> 
 Download the latest Jupyter Notebook file of
 the following repository and execute it in you favorite jupyter environnement (like 
-<a href="https://colab.research.google.com/" target="_blank">Colab</a> for example) to get an idea of what is possible.</p>
-<a href="https://visioterra.fr/telechargement/P317_DEMIX/notebook/" target="_blank"> Jupyter notebook repository</a>
+<a href="https://colab.research.google.com/" rel="nofollow noopener">Colab</a> for example) to get an idea of what is possible.</p>
+<a href="https://visioterra.fr/telechargement/P317_DEMIX/notebook/" rel="nofollow noopener"> Jupyter notebook repository</a>
 
 <h3 id='custom_indicator'>Getting a DEMIX layer and compute an indicator</h3>
 In this section, we will use the DEMIX lib to compute our own criterion on the SRTMGL1.
