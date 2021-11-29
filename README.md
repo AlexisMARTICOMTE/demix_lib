@@ -1,8 +1,8 @@
-<center><img src="https://visioterra.fr/telechargement/P317_DEMIX/logos/logo%202-2_white_demix_background.png" height="200px"></center>
-<center><h1> DEMIX library</h1></center>  
+<img align="center" src="https://visioterra.fr/telechargement/P317_DEMIX/logos/logo%202-2_white_demix_background.png" height="200px">
+<h1 align="center"> DEMIX library</h1> 
 
-<center><p>The DEMIX Library allow you to get scores for specific DEMIX tiles and DEM
-You also can download DEMIX Tile associated DEM Layers like SourceMask, Heights, ...</p></center>
+<p>The DEMIX Library allow you to get scores for specific DEMIX tiles and DEM
+You also can download DEMIX Tile associated DEM Layers like SourceMask, Heights, ...</p>
 
 ---
 
@@ -24,7 +24,7 @@ You also can download DEMIX Tile associated DEM Layers like SourceMask, Heights,
 
 ---
 
-<center><h2 id='Installation'> Installation</h2></center>
+<h2 id='Installation'> Installation</h2>
 To install the DEMIX library on your python environment :
 
 ```
@@ -32,7 +32,7 @@ pip install demix_lib
 ```
 
 
-<center><h2 id='demix_lib_functions'>DEMIX lib functions</h2></center>
+<h2 id='demix_lib_functions'>DEMIX lib functions</h2>
 This section is a step-by-step guide on how to use the DEMIX lib functions. By getting through this guide, you'll learn how to:<br/>
 *   Get a DEMIX tile id from a given longitude and latitude<br/>
 *   Apply a criterion to a DEM, over a given DEMIX tile<br/>
@@ -106,7 +106,7 @@ plt.legend( custom_handles,legend_label)
 plt.show()
 ```
 
-<center><h2 id='Getting-Geotiffs'>Utility functions</h2></center>
+<h2 id='Getting-Geotiffs'>Utility functions</h2>
 The DEMIX lib give you some utility functions that allow you to get or print informations about currently implemented criterions, available DEMs, layers...
 
 ```python
@@ -129,7 +129,7 @@ dl.print_criterion_list()
 ```
 
 
-<center><h2 id='dem_and_criterions'>Available DEMs and criterions</h2></center>
+<h2 id='dem_and_criterions'>Available DEMs and criterions</h2>
 <h3 id='Dem'>DEMs list</h3>
 
 | DEM name | supported |
@@ -161,7 +161,7 @@ dl.print_criterion_list()
 | SourceMask |
 | landWaterMask |
 
-<center><h2 id='usage_example'>Usage example</h2></center>
+<h2 id='usage_example'>Usage example</h2>
 
 <h3 id='jupyter_notebook'>Jupyter Notebook</h3>
 <p>We made a jupyter notebook to demonstrate how can be used the DEMIX lib.<br> 
