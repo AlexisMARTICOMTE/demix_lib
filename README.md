@@ -1,7 +1,7 @@
 <p align="center"><img  src="https://visioterra.fr/telechargement/P317_DEMIX/logos/logo%202-2_white_demix_background.png" height="200px"></p>
 <h1 align="center"> DEMIX library</h1> 
 
-<p>The DEMIX Library allow you to get scores for specific DEMIX tiles and DEM
+<p>The DEMIX Library allow you to get scores for specific DEMIX tiles and DEM.<br/>
 You also can download DEMIX Tile associated DEM Layers like SourceMask, Heights, ...</p>
 
 ---
@@ -16,6 +16,7 @@ You also can download DEMIX Tile associated DEM Layers like SourceMask, Heights,
 2. <a href="#dem_and_criterions">Available DEMs and criterions</a><br/>
     2.1 <a href="#Dem">Dem list</a><br/>
     2.2 <a href="#Criterion">Criterion list</a><br/>
+    2.3 <a href="#Layers">Layer list</a><br/>
 3. <a href="#utility">Utility functions</a><br/>
 4. <a href="#usage_example">Usage example</a><br/>
    4.1 <a href="#jupyter_notebook">Jupyter Notebook</a><br/>
@@ -24,7 +25,7 @@ You also can download DEMIX Tile associated DEM Layers like SourceMask, Heights,
 
 ---
 
-<h2 id='Installation'> Installation</h2>
+<h2 align="center" id='Installation'> Installation</h2>
 To install the DEMIX library on your python environment :
 
 ```
@@ -164,11 +165,13 @@ dl.print_criterion_list()
 <h2 align="center" id='usage_example'>Usage example</h2>
 
 <h3 id='jupyter_notebook'>Jupyter Notebook</h3>
-<p>We made a jupyter notebook to demonstrate how can be used the DEMIX lib.<br> 
-Download the latest Jupyter Notebook file of
-the following repository and execute it in you favorite jupyter environnement (like 
-<a href="https://colab.research.google.com/" rel="nofollow noopener">Colab</a> for example) to get an idea of what is possible.</p>
-<a href="https://visioterra.fr/telechargement/P317_DEMIX/notebook/" rel="nofollow noopener"> Jupyter notebook repository</a>
+<p>A jupyter notebook has been made to demonstrate how can be used the DEMIX lib.<br> 
+Download the latest Jupyter Notebook file of the following repository and execute it in you favorite jupyter 
+environnement (like <a href="https://colab.research.google.com/" target="_blank">Colab</a> for example) to get an
+idea of what is possible.</p>
+
+<a href="https://visioterra.fr/telechargement/P317_DEMIX/notebook/" target="_blank"> Jupyter notebook repository</a>
+
 
 <h3 id='custom_indicator'>Getting a DEMIX layer and compute an indicator</h3>
 In this section, we will use the DEMIX lib to compute our own criterion on the SRTMGL1.
