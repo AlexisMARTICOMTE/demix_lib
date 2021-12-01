@@ -1,4 +1,4 @@
-<p align="center"><img  src="https://visioterra.fr/telechargement/P317_DEMIX/logos/logo%202-2_white_demix_background.png" height="200px"></p>
+<p align="center"><img  src="https://visioterra.fr/telechargement/P317_DEMIX/logos/logo4_v2-3_200x200_white_demix_background.png" ></p>
 <h1 align="center"> DEMIX library</h1> 
 
 <p>The DEMIX Library allow you to get scores for specific DEMIX tiles and DEM.<br/>
