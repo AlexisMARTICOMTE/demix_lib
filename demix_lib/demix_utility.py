@@ -15,10 +15,11 @@
 import demix_lib.demix_lib_configuration as demix_conf
 import demix_lib.demix_url_handler as du
 
-
 # ---------------------------------------------------------------------------------------------------------------------
 # CONSTANTS
 # ---------------------------------------------------------------------------------------------------------------------
+from demix_lib import demix_colormaps
+
 
 def demix_help():
     """
@@ -50,6 +51,11 @@ def get_demix_tile_info(lon, lat):
 
 
 def is_dem_supported(dem_name):
+    """
+    Ask if a specific dem is supported
+    :param dem_name:
+    :return:
+    """
     for dem in demix_conf.supported_dem_list:
         if dem_name == dem:
             return True
@@ -99,6 +105,18 @@ def print_criterion_list():
         print("---------------------------")
 
 
+def print_colormap_list():
+    """
+    print the available colormap list
+    :return:
+    """
+    print("\nColormap list :")
+    print("---------------------------")
+    for colormap in demix_colormaps.colormap_list:
+        print("Colormap name   = " + str(colormap[0]))
+        print("---------------------------")
+
+
 def print_dem_list():
     """
     print the dem list
@@ -141,6 +159,14 @@ def get_criterion_list():
     :return: the available criterion list
     """
     return demix_conf.criterion_list
+
+
+def get_colormap_list():
+    """
+    get the available colormap list
+    :return: the available colormap list
+    """
+    return demix_colormaps.colormap_list
 
 
 def get_layer_list():

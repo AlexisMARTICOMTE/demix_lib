@@ -39,13 +39,14 @@ def byte_to_json(bytes_value):
 def request_pixels(tile_name, dem, layer, print_request=False):
     """
     Ask the server to get the geotiff layer corresponding to a specific layer
+    :param print_request: False if you dont want to see the request made to the server, True to see
     :param tile_name: str, a tile name, for example "N64ZW019"
     :param dem: str, a dem name, for example "SRTMGL1"
     :param layer: str, a layer name, for example "SourceMask"
     :return: the request response
     """
     request = BASE_URL + "service=getPixels" + "&DEMIXTile=" + tile_name + "&DEM=" + dem + "&Layer=" + layer
-    if print_request :
+    if print_request:
         print(request)
     return send_request(request)
 

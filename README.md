@@ -125,7 +125,9 @@ dl.print_supported_dem_list()
 #get or show the implemented criterion list
 criterion_list = dl.get_criterion_list()
 dl.print_criterion_list()
-
+#get or show the implemented colormaps
+criterion_list = dl.get_colormap_list()
+dl.print_colormap_list()
 
 ```
 
