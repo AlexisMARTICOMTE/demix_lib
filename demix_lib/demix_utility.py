@@ -160,6 +160,12 @@ def get_criterion_list():
     """
     return demix_conf.criterion_list
 
+def get_criterion_dict():
+    """
+    get the available criterion list
+    :return: the available criterion list
+    """
+    return dict(demix_conf.criterion_list)
 
 def get_colormap_list():
     """
@@ -168,6 +174,12 @@ def get_colormap_list():
     """
     return demix_colormaps.colormap_list
 
+def get_colormap_dict():
+    """
+    get the available colormap dictionnary
+    :return: the available colormap dictionnary
+    """
+    return dict(demix_colormaps.colormap_list)
 
 def get_layer_list():
     """
