@@ -87,3 +87,14 @@ def send_request(request):
     response = http.request('GET', request)
     http.clear()
     return byte_to_json(response.data)
+
+
+def build_demix_tile_kml_url(lon, lat):
+    """
+    Ask the server to get the tile name at the desired position
+    :param lon: float, longitude of the desired tile
+    :param lat: float, latitude of the desired tile
+    :return: the DEMIX tile name
+    """
+    request = BASE_URL + "service=getDEMIXTileInfo" + "&lon=" + str(lon) + "&lat=" + str(lat) + "&format=KML"
+    return request

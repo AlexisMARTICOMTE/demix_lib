@@ -3,9 +3,9 @@
 # Alexis MC - V0.2 - 17/11/2021 Added several useful lists to be used
 # ---------------------------------------------------------------------------------------------------------------------
 
-dem_list = ["SRTMGL1", "CopDEM_GLO-30", "AsterGDEM", "ALOS_World_3D", "Copernicus_DEM", "NASADEM"]
+dem_list = ["SRTMGL1", "CopDEM_GLO-30", "ASTERGDEM", "ALOS_World_3D", "Copernicus_DEM", "NASADEM"]
 
-supported_dem_list = ["CopDEM_GLO-30", "SRTMGL1", "AsterGDEM"]
+supported_dem_list = ["CopDEM_GLO-30", "SRTMGL1", "ASTERGDEM" ,"ALOS_World_3D"]
 
 criterion_list = [("A01", "Product fractional cover"),
                   ("A02", "Valid data fraction"),

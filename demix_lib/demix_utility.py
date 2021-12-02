@@ -160,12 +160,14 @@ def get_criterion_list():
     """
     return demix_conf.criterion_list
 
+
 def get_criterion_dict():
     """
     get the available criterion list
     :return: the available criterion list
     """
     return dict(demix_conf.criterion_list)
+
 
 def get_colormap_list():
     """
@@ -174,12 +176,14 @@ def get_colormap_list():
     """
     return demix_colormaps.colormap_list
 
+
 def get_colormap_dict():
     """
     get the available colormap dictionnary
     :return: the available colormap dictionnary
     """
     return dict(demix_colormaps.colormap_list)
+
 
 def get_layer_list():
     """
@@ -203,3 +207,14 @@ def get_supported_dem_list():
     :return: the supported dem list
     """
     return demix_conf.supported_dem_list
+
+
+def get_demix_tile_kml_url(lon, lat):
+    """
+    Ask the server to get the tile name at the desired position
+    :param lon: float, longitude of the desired tile
+    :param lat: float, latitude of the desired tile
+    :return: the DEMIX tile name
+    """
+    return du.build_demix_tile_kml_url(lon, lat)
+

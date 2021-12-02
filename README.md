@@ -141,8 +141,8 @@ dl.print_colormap_list()
 
 | DEM name | supported |
 | :-------------: | :-------------: |
-| ALOS World 3D | <span style="color:red">no</span> |
-| AsterGDEM | <span style="color:green">yes</span> |
+| ALOS World 3D | <span style="color:green">yes</span> |
+| ASTERGDEM | <span style="color:green">yes</span> |
 | CopDEM GLO-30 | <span style="color:green">yes</span> |
 | NASADEM | <span style="color:red">no</span> |
 | SRTMGL1 | <span style="color:green">yes</span> |
