@@ -7,13 +7,13 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name='demix_lib',
-    version='1.6',
+    version='1.7',
     packages=['demix_lib'],
     url='https://github.com/AlexisMARTICOMTE/demix_lib.git',
     license='mit',
     author='visioterra',
     author_email='info@visioterra.fr',
-    description='version 1.6 of the DEMIX library',
+    description='version 1.7 of the DEMIX library',
     long_description=long_description,
     long_description_content_type="text/markdown",
 )

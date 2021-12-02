@@ -116,15 +116,19 @@ import demix_lib as dl
 #get or show the layers that you can ask in a download_layer function
 layer_list = dl.get_layer_list()
 dl.print_layer_list()
+
 #get or show the full dem list
 dem_list = dl.get_dem_list()
 dl.print_dem_list()
+
 #get or show the supported dem list
 supported_dem_list = dl.get_supported_dem_list()
 dl.print_supported_dem_list()
+
 #get or show the implemented criterion list
 criterion_list = dl.get_criterion_list()
 dl.print_criterion_list()
+
 #get or show the implemented colormaps
 criterion_list = dl.get_colormap_list()
 dl.print_colormap_list()
@@ -138,7 +142,7 @@ dl.print_colormap_list()
 | DEM name | supported |
 | :-------------: | :-------------: |
 | ALOS World 3D | <span style="color:red">no</span> |
-| ASTER GDEM | <span style="color:red">no</span> |
+| AsterGDEM | <span style="color:green">yes</span> |
 | CopDEM GLO-30 | <span style="color:green">yes</span> |
 | NASADEM | <span style="color:red">no</span> |
 | SRTMGL1 | <span style="color:green">yes</span> |
@@ -159,7 +163,7 @@ dl.print_colormap_list()
 
 | Layer name |
 | :-------------: |
-| Height |
+| Heights |
 | validMask | 
 | SourceMask |
 | landWaterMask |

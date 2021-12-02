@@ -3,9 +3,9 @@
 # Alexis MC - V0.2 - 17/11/2021 Added several useful lists to be used
 # ---------------------------------------------------------------------------------------------------------------------
 
-dem_list = ["SRTMGL1", "CopDEM_GLO-30", "ASTER_GDEM", "ALOS_World_3D", "Copernicus_DEM", "NASADEM"]
+dem_list = ["SRTMGL1", "CopDEM_GLO-30", "AsterGDEM", "ALOS_World_3D", "Copernicus_DEM", "NASADEM"]
 
-supported_dem_list = ["CopDEM_GLO-30", "SRTMGL1"]
+supported_dem_list = ["CopDEM_GLO-30", "SRTMGL1", "AsterGDEM"]
 
 criterion_list = [("A01", "Product fractional cover"),
                   ("A02", "Valid data fraction"),
@@ -13,6 +13,6 @@ criterion_list = [("A01", "Product fractional cover"),
                   ("A04", "Valid land fraction"),
                   ("A05", "Primary land fraction")]
 
-layer_list = ["validMask", "SourceMask", "landWaterMask", "Heights"]
+layer_list = ["Heights", "validMask", "SourceMask", "landWaterMask" ]
 
 demix_tile_example = ["N35YE014F", "N64ZW019C"]
