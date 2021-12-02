@@ -186,26 +186,36 @@ In this section, we will use the DEMIX lib to compute our own criterion on the S
 First, we define a criterion
 
 ```python
-#get or show the layers that you can ask in a download_layer function
-layer_list = dl.get_layer_list()
-dl.print_layer_list()
+def max_height_custom_criterion(response):
+    """take height data and return a score based on altitude, if a point is higher than Everest highest point, 
+    score is reduce by maximum_value / everest_max_height *10"""
+    maximum_value=response["data"][0][0]
+    everest_max_height = 8848
+    for line in response["data"]:
+        if max(line) > maximum_value :
+            maximum_value = max(line)
+    #if result < 1, score = 100, else : 
+    result = maximum_value / everest_max_height
+    if result < 1 :
+        return 100
+    else :
+        return 100 - (result*10)
+    return score
 ```
 
 <h4>2 Get the wanted layer</h4>
 Second, we use the DEMIX lib to download the wanted tile and layer for SRTMGL1
 
 ```python
-#get or show the layers that you can ask in a download_layer function
-layer_list = dl.get_layer_list()
-dl.print_layer_list()
+lat = 27.986065
+lon = 86.922623
+response = dl.download_layer(demix_tile_name=dl.get_demix_tile_name(lon, lat),dem='SRTMGL1',layer='heights', print_request=False)
 ```
 
 <h4>3 Compute the criterion on the layer</h4>
 Finally, we compute the criterion on the downloaded layer and we plot the result
 
 ```python
-#get or show the layers that you can ask in a download_layer function
-layer_list = dl.get_layer_list()
-dl.print_layer_list()
+print(max_height_custom_criterion(response))
 ```
 
