@@ -8,19 +8,20 @@ You also can download DEMIX Tile associated DEM Layers like SourceMask, Heights,
 
 <h2> Table of contents: </h2>
 
-0. <a href="#Installation">Installation</a><br/>
-1. <a href="#demix_lib_functions"> DEMIX lib functions</a><br/>
-    1.1 <a href="#getting_demix_tile">Getting DEMIX Tile</a><br/>
-    1.2 <a href="#getting_score">Getting Scores</a><br/>
-    1.3 <a href="#Getting-Geotiffs">Getting DEM</a><br/>
-2. <a href="#dem_and_criterions">Available DEMs and criterions</a><br/>
-    2.1 <a href="#Dem">Dem list</a><br/>
-    2.2 <a href="#Criterion">Criterion list</a><br/>
-    2.3 <a href="#Layers">Layer list</a><br/>
-3. <a href="#utility">Utility functions</a><br/>
-4. <a href="#usage_example">Usage example</a><br/>
-   4.1 <a href="#jupyter_notebook">Jupyter Notebook</a><br/>
-   4.2 <a href="#custom_indicator">Getting a DEMIX layer and compute an indicator</a><br/>
+1. <a href="#Installation">Installation</a><br/>
+2. <a href="#demix_lib_functions"> DEMIX lib functions</a><br/>
+    2.1 <a href="#getting_demix_tile">Getting DEMIX Tile ID</a><br/>
+    2.2 <a href="#getting_score">Getting Scores</a><br/>
+    2.3 <a href="#getting_dem">Getting DEM</a><br/>
+3. <a href="#utility_functions">Utility functions</a><br/>
+4. <a href="#dem_and_criterions">Available DEMs and criterions</a><br/>
+    4.1 <a href="#Dem">Dem list</a><br/>
+    4.2 <a href="#Criterion">Criterion list</a><br/>
+    4.3 <a href="#Layers">Layer list</a><br/>
+
+5. <a href="#usage_example">Usage example</a><br/>
+   5.1 <a href="#jupyter_notebook">Jupyter Notebook</a><br/>
+   5.2 <a href="#custom_indicator">Getting a DEMIX layer and compute an indicator</a><br/>
 <br/>
 
 ---
@@ -39,7 +40,7 @@ This section is a step-by-step guide on how to use the DEMIX lib functions. By g
 *   Apply a criterion to a DEM, over a given DEMIX tile<br/>
 *   Retrieve a raster of DEM layer over a DEMIX tile
 
-<h3 id="getting_demix_tile">Getting DEMIX Tile</h3>
+<h3 id="getting_demix_tile">Getting DEMIX Tile ID</h3>
 The DEMIX api enables you to get a DEMIX tile id from a given longitude and latitude.
 
 ```Python
@@ -50,7 +51,7 @@ print(dl.get_demix_tile_info(lon, lat))
 print(dl.get_demix_tile_name(lon, lat))
 ```
 
-<h3 id='#getting_score'>Getting Scores</h3>
+<h3 id='getting_score'>Getting Scores</h3>
 First thing first, you can use the demix api to get directly stats from the desired DEMIX Tile and Criterion
 <br/>
 In order to get scores to specific dem and tile, you need to choose a criterion.
@@ -75,7 +76,7 @@ for dem in  dems:
 ```
 
 
-<h3 id='Getting-Geotiffs'>Getting DEM</h3>
+<h3 id='getting_dem'>Getting DEM</h3>
 To go further :
 You can always use your own criterions by downloading the wanted layer on your DEMIX tile and apply custom code to it.
 <br/>To download a DEM layer for a specific DEMIX Tile :
@@ -107,7 +108,7 @@ plt.legend( custom_handles,legend_label)
 plt.show()
 ```
 
-<h2 align="center" id='Getting-Geotiffs'>Utility functions</h2>
+<h2 align="center" id='utility_functions'>Utility functions</h2>
 The DEMIX lib give you some utility functions that allow you to get or print informations about currently implemented criterions, available DEMs, layers...
 
 ```python
